@@ -9,9 +9,9 @@
 
 安装好本工具后，直接命令行执行即可：
 ``` bash
-$ weIcon xxx.zip
+$ node weIcon.js fontello-xxxxx/
 ```
-会自动在当前目录生成`文件名.wxss`文件
+会自动在当前目录生成`weIcon.wxss`文件
 
 ## 导入wxss文件
 直接复制`wxss`文件到微信小程序目录，然后在`app.wxss`中引用：
