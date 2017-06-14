@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 /**
  * weIconBuilder v0.1
  * https://github.com/safe-dog/weIconBuilder
@@ -9,7 +11,6 @@ var path = require('path');
 var argv = process.argv;
 
 if (argv.length !== 3 && argv.length !== 4) {
-  console.log(argv.length, argv)
   console.log('* 使用方法：weIcon fontello-68bafb5c/ [output.wxss]');
   return console.log('- 第一个参数为解压的图标资源目录，第二个可选，为输出的wxss文件名');
 }

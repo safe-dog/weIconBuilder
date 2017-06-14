@@ -1,0 +1,25 @@
+{
+  "name": "weicon",
+  "version": "0.0.5",
+  "description": "weapp font-icon builder",
+  "main": "weIcon.js",
+  "bin": {
+    "weicon": "./weIcon.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/safe-dog/weIconBuilder.git"
+  },
+  "keywords": [
+    "weapp"
+  ],
+  "author": "safedog.cc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/safe-dog/weIconBuilder/issues"
+  },
+  "homepage": "https://github.com/safe-dog/weIconBuilder#readme"
+}
