@@ -1,0 +1,108 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@3.10.3
+3 info using node@v6.6.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/dev/Coding/wxapp/weIconBuilder',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/dev/.npm/weicon/0.0.5/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/dev/.npm correctMkdir not in flight; initializing
+10 info lifecycle weicon@0.0.5~prepublish: weicon@0.0.5
+11 silly lifecycle weicon@0.0.5~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/Users/dev/.npm/weicon/0.0.5/package.tgz',
+12 verbose tar pack   '/Users/dev/Coding/wxapp/weIconBuilder' ]
+13 verbose tarball /Users/dev/.npm/weicon/0.0.5/package.tgz
+14 verbose folder /Users/dev/Coding/wxapp/weIconBuilder
+15 verbose addLocalTarball adding from inside cache /Users/dev/.npm/weicon/0.0.5/package.tgz
+16 verbose correctMkdir /Users/dev/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd weicon@0.0.5
+18 verbose afterAdd /Users/dev/.npm/weicon/0.0.5/package/package.json not in flight; writing
+19 verbose correctMkdir /Users/dev/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /Users/dev/.npm/weicon/0.0.5/package/package.json written
+21 silly publish { name: 'weicon',
+21 silly publish   version: '0.0.5',
+21 silly publish   description: 'weapp font-icon builder',
+21 silly publish   main: 'weIcon.js',
+21 silly publish   bin: { weicon: './weIcon.js' },
+21 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/safe-dog/weIconBuilder.git' },
+21 silly publish   keywords: [ 'weapp' ],
+21 silly publish   author: { name: 'safedog.cc' },
+21 silly publish   license: 'ISC',
+21 silly publish   bugs: { url: 'https://github.com/safe-dog/weIconBuilder/issues' },
+21 silly publish   homepage: 'https://github.com/safe-dog/weIconBuilder#readme',
+21 silly publish   readme: '# weIconBuilder\n微信小程序字体图标样式生成器\n\n## 生成字体图标资源\n\n进入[http://fontello.com/](http://fontello.com/)网站，选择你喜欢的图标，然后下载（zip文件）\n\n## 安装本工具\n``` bash\n$ sudo npm i weicon -g\n```\n\n## 生成wxss样式文件\n\n安装好本工具后，直接命令行执行即可：\n``` bash\n$ weicon fontello-xxxxx/\n```\n会自动在当前目录生成`weIcon.wxss`文件\n或者，自定义生成的文件名：\n``` bash\n$ weicon fontello-xxxxx/ myicon.wxss\n```\n\n## 导入wxss文件\n直接复制`wxss`文件到微信小程序目录，然后在`app.wxss`中引用：\n``` wxss\n/**  app.wxss **/\n@import "libs/weicon.wxss";\n```\n\n## 使用图标\n在`wxml`文件中，使用`text`或者`view`组件，设置`class`即可使用图标：\n``` wxml\n// page.wxml\n\n<view class="weIcon weIcon-search" />\n<text class="weIcon weIcon-home" />\n```\n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: '6fcb5be928c77d9ada0a559fcd8aedf92a6b0877',
+21 silly publish   _id: 'weicon@0.0.5',
+21 silly publish   _shasum: '7566180ffa05a4cb0d61c93171cbfaf87231169e',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name weicon
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'weicon',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   escapedName: 'weicon',
+26 silly mapToRegistry   name: 'weicon',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/weicon
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading /Users/dev/.npm/weicon/0.0.5/package.tgz
+30 verbose request uri https://registry.npmjs.org/weicon
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 6:56:48 PM
+33 verbose request using bearer token for auth
+34 verbose request id 402dfb034ac3fa13
+35 http request PUT https://registry.npmjs.org/weicon
+36 http 403 https://registry.npmjs.org/weicon
+37 verbose headers { 'content-type': 'application/json',
+37 verbose headers   'cache-control': 'max-age=300',
+37 verbose headers   'content-length': '95',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   date: 'Wed, 14 Jun 2017 10:56:51 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'x-served-by': 'cache-nrt6131-NRT',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1497437811.095857,VS0,VE619',
+37 verbose headers   vary: 'Accept-Encoding' }
+38 verbose request invalidating /Users/dev/.npm/registry.npmjs.org/weicon on PUT
+39 error publish Failed PUT 403
+40 verbose stack Error: "You cannot publish over the previously published version 0.0.5." : weicon
+40 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+40 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+40 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:200:22)
+40 verbose stack     at emitTwo (events.js:106:13)
+40 verbose stack     at Request.emit (events.js:191:7)
+40 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1067:10)
+40 verbose stack     at emitOne (events.js:101:20)
+40 verbose stack     at Request.emit (events.js:188:7)
+40 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:988:12)
+41 verbose statusCode 403
+42 verbose pkgid weicon
+43 verbose cwd /Users/dev/Coding/wxapp/weIconBuilder
+44 error Darwin 16.3.0
+45 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+46 error node v6.6.0
+47 error npm  v3.10.3
+48 error code E403
+49 error "You cannot publish over the previously published version 0.0.5." : weicon
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]
