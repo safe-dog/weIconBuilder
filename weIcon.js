@@ -32,17 +32,25 @@ var fontTtfBase64 = fs.readFileSync(fontTtf).toString('base64');
 var fontCssContent = fs.readFileSync(fontCss).toString().split('\n');
 // 解析css资源
 var fontCssResult = '';
+var ICONS = [];
 
 for (var i = 0; i < fontCssContent.length; i++) {
   var line = fontCssContent[i];
   if (line.indexOf('.icon-') === 0) {
-    fontCssResult += line.split(' /*')[0].replace('.icon-', '.weIcon-');
+    var icon = line.split(' /*')[0].replace('.icon-', '.weIcon-');
+    fontCssResult += icon;
+    ICONS.push(icon.split(':')[0]);
   }
 }
 
 // 头部内容
 var fontCssHeader = "\
-/** [由weIconBuilder生成](https://github.com/safe-dog/weIconBuilder) **/\n\
+/**\n\
+ * 本文件由weIconBuilder生成\n\
+ * https://github.com/safe-dog/weIconBuilder\n\
+ * ========\n\
+ * 图标列表：\n - " + ICONS.join('\n - ') + "\n\
+ */\n\
 @font-face {\
   font-family: 'weIcon';\
   src: url(data:font/truetype;charset=utf-8;base64," + fontTtfBase64 + ") format('truetype');\

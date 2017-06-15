@@ -1,6 +1,6 @@
 {
   "name": "weicon",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "weapp font-icon builder",
   "main": "weIcon.js",
   "bin": {
